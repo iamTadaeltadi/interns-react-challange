@@ -1,0 +1,18 @@
+.actor-detail {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.actor-detail h1 {
+  color: #333;
+  text-align: center;
+}
+
+.actor-detail p {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
