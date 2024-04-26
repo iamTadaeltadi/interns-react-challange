@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ActorsList from './views/ActorsList';
-import ActorDetail from './components/ActorCard/ActorCard';
+import ActorDetail from './components/ActorDetail/ActorDetail'
 
 function App() {
   return (

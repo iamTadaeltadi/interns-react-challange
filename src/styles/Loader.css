@@ -1,18 +1,53 @@
-.actor-detail {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.actor-detail h1 {
-  color: #333;
-  text-align: center;
+.loader-inner {
+  display: flex;
+  align-items: center;
 }
 
-.actor-detail p {
-  color: #666;
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+.loader-bar {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #1db954;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.loader-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ffffff;
+  animation: fillAnimation 2s infinite;
+}
+
+.loader-icon {
+  margin-left: 20px;
+  color: #1db954;
+}
+
+/* Spinner animation */
+@keyframes fillAnimation {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+.loader-icon i {
+  font-size: 40px;
 }

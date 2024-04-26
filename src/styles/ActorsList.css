@@ -1,23 +1,88 @@
+
 .actors-list {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  padding: 2rem;
+  
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: none;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .actors-list h1 {
+  font-weight: bold;
+  color: #1db954;
+  margin-bottom: 30px;
   text-align: center;
-  color: #333;
+  position: relative; 
+  animation: fadeIn 1s ease-in-out;
 }
 
-.actors {
+.actors-list h1::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; 
+  left: 50%;
+  width: 50px; 
+  height: 2px; 
+  background-color: #1db954; 
+  transform: translateX(-50%);
+  animation: underlineAnimation 1s ease-in-out infinite; 
+}
+
+@keyframes underlineAnimation {
+  0% {
+    width: 0; 
+  }
+  50% {
+    width: 50px; 
+  }
+  100% {
+    width: 0; 
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+
+ .actor-cards{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .actors {
-    flex-direction: column;
-    align-items: center;
-  }
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.pagination button {
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1ed15f; 
+  border: none;
+  cursor: pointer;
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #045326; 
+}
+
+.pagination button:disabled {
+  background-color: #7f8c8d;
+  color: #95a5a6;
+  cursor: not-allowed;
 }
